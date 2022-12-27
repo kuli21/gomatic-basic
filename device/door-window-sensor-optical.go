@@ -9,7 +9,7 @@ type DoorWindowSensorOptical struct {
 	Address string `hmk:"ADDRESS"`
 	Error   bool   `hmk:"ERROR"`
 	Lowbat  bool   `hmk:"LOWBAT"`
-	State   bool   `hmk:"ADSTATEDRESS"`
+	State   bool   `hmk:"STATE"`
 }
 
 func (p *DoorWindowSensorOptical) GetData(ccuUrl string) error {
