@@ -6,10 +6,10 @@ import (
 )
 
 type PowerPlugSwitch struct {
-	Address string
-	Inhibit bool //INHIBIT
-	State   bool //STATE
-	Working bool //WORKING
+	Address string `hmk:"ADDRESS"`
+	Inhibit bool   `hmk:"INHIBIT"`
+	State   bool   `hmk:"STATE"`
+	Working bool   `hmk:"WORKING"`
 }
 
 func (p *PowerPlugSwitch) GetData(ccuUrl string) error {

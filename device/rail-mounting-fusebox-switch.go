@@ -8,16 +8,16 @@ import (
 )
 
 type RailMountingSwitch struct {
-	Address       string
-	Inhibit       bool
-	State         bool
-	Working       bool
-	Boot          bool
-	Current       float64
-	EnergyCounter float64
-	Frequency     float64
-	Power         float64
-	Voltage       float64
+	Address       string  `hmk:"ADDRESS"`
+	Inhibit       bool    `hmk:"INHIBIT"`
+	State         bool    `hmk:"STATE"`
+	Working       bool    `hmk:"WORKING"`
+	Boot          bool    `hmk:"BOOT"`
+	Current       float64 `hmk:"CURRENT"`
+	EnergyCounter float64 `hmk:"ENERGY_COUNTER"`
+	Frequency     float64 `hmk:"FREQUENCY"`
+	Power         float64 `hmk:"POWER"`
+	Voltage       float64 `hmk:"VOLTAGE"`
 }
 
 func (p *RailMountingSwitch) GetData(ccuUrl string) error {

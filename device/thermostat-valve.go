@@ -6,23 +6,23 @@ import (
 )
 
 type ThermostatValve struct {
-	Address           string
-	ActualTemperature float64 //ACTUAL_TEMPERATURE
-	BatteryState      float64 //BATTERY_STATE
-	BoostState        int     //BOOST_STATE
-	ControlMode       int     //CONTROL_MODE
-	FaultReporting    int     //FAULT_REPORTING
-	PartyStartDay     int     //PARTY_START_DAY
-	PartyStartMonth   int     //PARTY_START_MONTH
-	PartyStartTime    int     //PARTY_START_TIME
-	PartyStartYear    int     //PARTY_START_YEAR
-	PartyStopDay      int     //PARTY_STOP_DAY
-	PartyStopMonth    int     //PARTY_STOP_MONTH
-	PartyStopTime     int     //PARTY_STOP_TIME
-	PartyStopYear     int     //PARTY_STOP_YEAR
-	PartyTemperature  float64 //PARTY_TEMPERATURE
-	SetTemperature    float64 //SET_TEMPERATURE
-	ValveState        int     //VALVE_STATE
+	Address           string  `hmk:"ADDRESS"`
+	ActualTemperature float64 `hmk:"ACTUAL_TEMPERATURE"`
+	BatteryState      float64 `hmk:"BATTERY_STATE"`
+	BoostState        int     `hmk:"BOOST_STATE"`
+	ControlMode       int     `hmk:"CONTROL_MODE"`
+	FaultReporting    int     `hmk:"FAULT_REPORTING"`
+	PartyStartDay     int     `hmk:"PARTY_START_DAY"`
+	PartyStartMonth   int     `hmk:"PARTY_START_MONTH"`
+	PartyStartTime    int     `hmk:"PARTY_START_TIME"`
+	PartyStartYear    int     `hmk:"PARTY_START_YEAR"`
+	PartyStopDay      int     `hmk:"PARTY_STOP_DAY"`
+	PartyStopMonth    int     `hmk:"PARTY_STOP_MONTH"`
+	PartyStopTime     int     `hmk:"PARTY_STOP_TIME"`
+	PartyStopYear     int     `hmk:"PARTY_STOP_YEAR"`
+	PartyTemperature  float64 `hmk:"PARTY_TEMPERATURE"`
+	SetTemperature    float64 `hmk:"SET_TEMPERATURE"`
+	ValveState        int     `hmk:"VALVE_STATE"`
 }
 
 func (p *ThermostatValve) GetData(ccuUrl string) error {
