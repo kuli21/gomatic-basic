@@ -18,11 +18,12 @@ import (
 func main() {
 	//Only necessary for further development of library
 	//------------------------------------------------------
+	ccuUrl := "http://192.168.xxx.xxx:2001"
 	fmt.Println("------- How to implement new device -------")
 	fmt.Println("--- 1) Print all devices and search for your device (number) -------")
-	device.PrintAllDevices()
+	device.PrintAllDevices(ccuUrl)
 	fmt.Println("--- 2) Get the device number (id) and put it in the function e.g. devices.PrintParamset(OE9999999:1) -------")
-	device.PrintParamset("QE1111112:1")
+	device.PrintParamset("QE1111112:1", ccuUrl)
 }
 ```
 
